@@ -39,7 +39,7 @@ metadata:
         }
       ]
     capabilities: Basic Install
-  name: watermarkpodautoscaler.v0.0.42
+  name: watermarkpodautoscaler.v0.0.43
   namespace: placeholder
 spec:
   apiservicedefinitions: {}
@@ -160,7 +160,7 @@ spec:
                       fieldPath: metadata.name
                 - name: OPERATOR_NAME
                   value: watermarkpodautoscaler
-                image: datadog/watermarkpodautoscaler:v0.0.42
+                image: datadog/watermarkpodautoscaler:v0.0.43
                 imagePullPolicy: IfNotPresent
                 name: watermarkpodautoscaler
                 resources: {}
@@ -242,5 +242,5 @@ spec:
   maturity: alpha
   provider:
     name: Datadog
-  replaces: watermarkpodautoscaler.v0.1.0
-  version: 0.0.42
+  replaces: watermarkpodautoscaler.v0.0.42
+  version: 0.0.43

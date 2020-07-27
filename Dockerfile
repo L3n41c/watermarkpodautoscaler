@@ -1,4 +1,4 @@
-ARG TAG=0.0.42
+ARG TAG=0.0.43
 FROM golang:1.13 as build-env
 ARG TAG
 WORKDIR /src

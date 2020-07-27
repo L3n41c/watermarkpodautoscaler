@@ -21,8 +21,11 @@ fi
 ROOT=$(git rev-parse --show-toplevel)
 cd "$ROOT"
 
+# Update Makefile
+$SED "s/^TAG\?=.*/TAG?=$VVERSION/" "$ROOT/Makefile"
+
 # Update Dockerfile
-$SED "s/ARG TAG=.*/ARG TAG=$VERSION/" "$ROOT/Dockerfile"
+$SED "s/^ARG TAG=.*/ARG TAG=$VERSION/" "$ROOT/Dockerfile"
 
 # Update chart version
 "$ROOT/bin/yq" w -i "$ROOT/chart/watermarkpodautoscaler/Chart.yaml" "appVersion" "$VVERSION"

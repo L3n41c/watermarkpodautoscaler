@@ -45,6 +45,8 @@ build_image:
   stage: image
   tags: [ "runner:docker", "size:large" ]
   image: 486234852809.dkr.ecr.us-east-1.amazonaws.com/docker-notary:0.6.1
+  inherit:
+    default: false
   script:
     - IMAGE_NAME=$DOCKER_REGISTRY/$PROJECTNAME:$TARGET_TAG
     - docker build -t $IMAGE_NAME -f Dockerfile .

@@ -3,7 +3,7 @@ ARTIFACT=controller
 ARTIFACT_PLUGIN=kubectl-${PROJECT_NAME}
 
 # 0.0 shouldn't clobber any released builds
-TAG?=v0.0.45
+TAG?=v0.0.46
 DOCKER_REGISTRY=
 PREFIX?=${DOCKER_REGISTRY}datadog/${PROJECT_NAME}
 SOURCEDIR = "."

@@ -242,5 +242,5 @@ spec:
   maturity: alpha
   provider:
     name: Datadog
-  replaces: watermarkpodautoscaler.v0.1.0
+  replaces: watermarkpodautoscaler.v0.1.0-14-g1240fe8-dirty
   version: 0.0.42

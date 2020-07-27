@@ -19,9 +19,9 @@ spec:
       serviceAccountName: watermarkpodautoscaler
       containers:
         - name: watermarkpodautoscaler
-          image: datadog/watermarkpodautoscaler:v0.0.1
+          image: datadog/watermarkpodautoscaler:v0.0.42
           command:
-          - watermarkpodautoscaler
+            - watermarkpodautoscaler
           imagePullPolicy: IfNotPresent
           env:
             # Watch every ns. Comment if you want to watch all namespaces

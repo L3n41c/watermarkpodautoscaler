@@ -19,7 +19,7 @@ spec:
       serviceAccountName: watermarkpodautoscaler
       containers:
         - name: watermarkpodautoscaler
-          image: datadog/watermarkpodautoscaler:v0.0.44
+          image: datadog/watermarkpodautoscaler:v0.0.45
           command:
             - watermarkpodautoscaler
           imagePullPolicy: IfNotPresent

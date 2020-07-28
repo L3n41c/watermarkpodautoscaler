@@ -19,7 +19,9 @@ WORK_DIR=$(mktemp -d)
 trap 'rm -rf "$WORK_DIR"' EXIT
 
 # move all zip file if exit
-mv "$ZIP_FILE_NAME" "$ZIP_FILE_NAME.old"
+if [[ -e "$ZIP_FILE_NAME" ]]; then
+    mv "$ZIP_FILE_NAME" "$ZIP_FILE_NAME.old"
+fi
 
 for i in "$OLM_FOLDER"/*/*.yaml "$OLM_FOLDER"/*.yaml; do
     $SED "s|${IMAGE_NAME}|${REDHAT_IMAGE_NAME}|g" < "$i" > "$WORK_DIR/${i##*/}"
